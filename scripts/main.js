@@ -105,7 +105,7 @@ var question11 = ['Which of the following is the correct use of the confirm dial
  var question = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14, question15];
 
 
-for (var x=1; x<15; x++){
+for (var x=0; x<15; x++){
 	var qno =x+1;
 	console.log("Question No. "+ qno);
 	for (var i=0; i<5; i++){
@@ -114,8 +114,8 @@ for (var x=1; x<15; x++){
 		
 
 	}
-	var ans = prompt("enter the correct answer 1 to 4");
-	var wrans = parseFloat(question[x][5])
+	var ans = arseFloat(prompt("enter the correct answer 1 to 4"));
+	var wrans = pquestion[x][5];
 
 
 	if (ans === wrans){
