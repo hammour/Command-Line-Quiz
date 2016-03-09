@@ -105,7 +105,8 @@ var question11 = ['Which of the following is the correct use of the confirm dial
 
 
 for (var x=1; x<15; x++){
-	console.log("Question No. "+ x);
+	var qno =x+1;
+	console.log("Question No. "+ qno);
 	for (var i=0; i<5; i++){
 		
 		console.log (question[x][i]);
@@ -113,13 +114,19 @@ for (var x=1; x<15; x++){
 
 	}
 	var ans = prompt("enter the correct answer 1 to 4");
+	var wrans = parseFloat(question[x][5])
 
-	if (ans == question[x][5]){
+
+	if (ans === wrans){
 		correct++;
 		console.log("your answer is correct!!");
-	} else {console.log("wrong answer.");
+		confirm("your answer is correct!!");
+	} else {
+		console.log("wrong answer!!!!! "+ question[x][wrans]);
+		confirm("wrong answer. correct answer is " + question[x][wrans] );
 			wrong++;
 		}
 } 
-
-console.log("your got "+ correct+" correct answers and "+wrong+" Wrong answers");
+var percent = (correct/15)*100;
+confirm ("you\'ve got "+ correct+" correct answers and "+wrong+" Wrong answers, which is "+percent+"%");
+console.log("you\'ve got "+ correct+" correct answers and "+wrong+" Wrong answers, which is "+percent+"%" );
