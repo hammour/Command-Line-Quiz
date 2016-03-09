@@ -1,6 +1,7 @@
 
-//document.write(" This is a Quiz to help you better understand how did you perform in your first week of Front-End Development.")
-//var name = prompt("What is your name?");
+confirm("This is a timed quiz to test your HTML/CSS/JavaScript knowledge. enjoy!")
+
+var starttime = Date.now();
 var correct = 0;
 var wrong = 0;
 var question1 = ['This HTML anchor tag will not work. Why? <a href=https://www.codecademy.com/>click here</a>',
@@ -127,6 +128,8 @@ for (var x=1; x<15; x++){
 			wrong++;
 		}
 } 
+var endtime= Date.now()
+var qtime=(endtime-starttime)/1000;
 var percent = (correct/15)*100;
-confirm ("you\'ve got "+ correct+" correct answers and "+wrong+" Wrong answers, which is "+percent+"%");
-console.log("you\'ve got "+ correct+" correct answers and "+wrong+" Wrong answers, which is "+percent+"%" );
+confirm ("you\'ve got "+ correct+" correct answers and "+wrong+" Wrong answers, which is "+percent+"%  and finished it in "+qtime+" seconds");
+console.log("you\'ve got "+ correct+" correct answers and "+wrong+" Wrong answers, which is "+percent+"% and finished in "+qtime+" seconds" );
